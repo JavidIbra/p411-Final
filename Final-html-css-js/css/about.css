@@ -5,9 +5,32 @@
   font-family: Poppins;
 }
 
-/* section {
+body {
   position: relative;
-} */
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 27px;
+  right: 27px;
+  text-align: center;
+  display: none;
+}
+
+.scroll-top:hover {
+  transform: scale(1);
+}
+
+.scroll-top i {
+  background-color: #7e57fd;
+  border-radius: 5px;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  color: white;
+  display: inline-block;
+  font-size: 25px;
+}
 
 .navbar-icon {
   height: 90px;
@@ -23,6 +46,33 @@
   transition: all 0.3s ease;
   padding: 13px;
 }
+
+.pages {
+  opacity: 0;
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px 55px 15px 10px;
+  top: 90px;
+  left: 625px;
+  box-shadow: 0 15px 30px rgb(0 0 0 / 5%);
+}
+
+.list-wrapper a {
+  color: #a8a8a8;
+  text-decoration: none;
+}
+
+.list-wrapper li {
+  transition: all .3s ease;
+  padding: 10px;
+  list-style: none;
+}
+
+.list-wrapper a:hover {
+  color: #7e57ff;
+}
+
 
 .navbar.scrolled .button-nav {
   background-color: #7e57ff;
@@ -47,6 +97,10 @@
   color: #fffdfd;
 }
 
+.navbar.scrolled .button-nav:hover {
+  background-color: rgb(24, 13, 46);
+}
+
 .navbar.scrolled .nav-item a {
   transition: all 0.4s ease;
   color: rgb(43, 39, 39);
@@ -58,12 +112,20 @@
   color: white;
 }
 
+.nav-item-active {
+  color: #7e57ff;
+}
+
 .nav-item a:hover {
   color: #7e57fd;
 }
 
 .navbar.scrolled .nav-item a {
   color: black;
+}
+
+.navbar.scrolled .nav-item-active {
+  color: #7e57fd;
 }
 
 .navbar.scrolled .nav-item a:hover {
@@ -77,7 +139,7 @@
 }
 
 #about-header {
-  height: 35vh;
+  height: 50vh;
   overflow: hidden;
   background-color: #081828;
   background-image: url("../img/about-banner-bg.svg");
@@ -87,6 +149,10 @@
   background-size: cover;
   padding-top: 150px;
   box-shadow: 0 15px 30px rgb(0 0 0 / 5%);
+}
+
+.icon {
+  color: white;
 }
 
 .items-holder {
@@ -219,6 +285,25 @@
   color: #9e9e9ee7;
 }
 
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 20px;
+  transition: all 0.3s ease;
+  height: 7px;
+  border-radius: 50px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  width: 40px;
+  background-color: #3080e3;
+}
+
+
 #meet-team {
   padding-bottom: 100px;
 }
@@ -286,7 +371,7 @@
 }
 
 #footer {
-  height: 70vh;
+  /* height: 70vh; */
   padding-top: 90px;
   background-color: #081828;
   color: white;
@@ -330,7 +415,8 @@
   margin-top: 20px;
   width: 200px;
   height: 40px;
-  border-radius: 7px;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
   background-color: #1e3347;
   border: none;
   color: white;
@@ -344,7 +430,9 @@
   margin-top: 20px;
   border-right: none;
   color: white;
-  border-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: 0px 10px;
 }
 
 .hr {
